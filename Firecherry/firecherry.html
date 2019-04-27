@@ -1,0 +1,337 @@
+<!-- DOCTYPE is an instruction to the web browser about what version of HTML the page is written in where this document is written in HTML 5 -->
+<!DOCTYPE html>
+<!-- The lang attribute specifies the language of the element's content which happens to be the entire HTML document in this case -->
+<html lang="en">
+<!-- The head element containes information regarding the HTML document more for the browsers than for visitors provided in the meta tags and CSS and Javascript files that affect the document overall are also linked here -->
+<head>
+<meta charset="UTF-8">
+
+<!-- TASK 1 : Specifications and Requirements-->
+
+<!-- 
+This HTML file is properly documented and every initial instance of various elements and some attributes are appropriately defined; most by myself and some from various sources mentioned alongside them. Also, this information has been shifted from the very top to down a few lines as otherwise, the 'character-set' meta information wasn't being parsed.
+USES & Audience : This HTML document serves as the homepage of Firecherry which is an imaginary brand that develops and sells mobile devices and other related products. The contents of this webpage has been localised in accordance to Australian consumers. This webpage contains a brochure displaying the current product line of the company and an order form which has an embedded emailing program that emails the entire customer and product information details to the company's email address. 
+USING DHTML : Dynamic HyperText Markup Language is the name given to the collection of a markup language(HTML), presentation definition language(CSS) and client-side scripting language(JS) which is used to create dynamic, interactive and responsive webpages. The best looking websites are often made from these and hence, it is indeed preferred when it comes to building attractive websites to grab visitor's attention. However, the lack of server-side scripting in DHTML has lead to the usage of AJAX as well. According to W3C, 'HTML, CSS, Javascript WebAPIs' are indeed industry standards when it comes to web design and applications. 
+-->
+
+<!-- TASK 2 : Create the Document Structure & 
+	 TASK 3 : Incorporate the web page components -->
+	 
+	<!-- Allows to define the title of the HTML document -->
+	<title>Firecherry (Australia)</title>
+	<!-- Some meta data - information about data -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="author" content="Chirag Tamhane"/>
+	<!-- The link element helps to link external files to be used -->
+	<!-- The firecherry logo as the icon of this webpage -->
+	<link rel="icon" type="image/gif" href="images/firecherry.png"/>
+	<!-- Cascading Style Sheets from Bootstrap and a custom one along with one from google fonts to have a few specific fonts -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/custom.css"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chivo:300,700"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700"/>
+	<!-- Javascript can be used internally by writing it inside the 'script' element or it can be used externally by linking the files to be used -->
+	<!-- A custom Javascript file -->
+	<script src="js/custom.js"></script>
+</head>
+<!-- The 'body' tag defines the main content of the HTML document or the section of the HTML document that will be directly visible on your web page ~ techonthenet.com  -->
+<body>
+	<!-- Header section containing Home and Order navigation buttons along with brand logo -->
+	<!-- Divider (div) element used to group parts of content together and referenced for further usage -->
+	<div class="header">
+  		<a class="products" href="firecherry.html">Home</a>
+  		<a class="orderform" href="#order">Order</a>
+  		<img src="images/firecherry.png" width="24" alt="firecherry"/>
+  	</div>
+  	<!-- The break rule or 'br' tag is used to introduce line breaks -->
+  	<br>
+  	<!-- Image Banners on homepage - More attractive, Implements ImageMap -->
+  	<div class="container">
+  		<!-- The 'img' element is used to embed images in the document and has attributes like src(used to specify the location of the image), width and height(used to specify the dimensions of the image), alt(used to provide alternative information in unfortunate cases where the user is unable to view the image) and other attributes like usemap(used to specify the 'map' whose data needs to be sourced when being an imagemap) -->
+  		<img src="images/header1.png" width="1200" height="627" alt="header1" usemap="#header1"/>
+  		<img src="images/header2.png" width="1200" height="627" alt="header2" usemap="#header2"/>
+  		<!-- The 'map' element is used to map certain portions of an image similar to a divider element used for textual content where the name attribute helps in naming the specific map element which could be used by images -->
+  		<map name="header1">
+  			<!-- The 'area' tag is used to define a shape and it's co-ordinates along with it's associated attributes --> 
+  			<area shape="rect" coords="0,0,731,627" href="#fxtreme" alt="FirecherryXtreme"/>
+  			<area shape="rect" coords="731,0,1200,627" href="#products" alt="Products"/>
+  		</map>
+  		<map name="header2">
+  			<area shape="rect" coords="0,0,416,627" href="#order" alt="Order"/>
+  			<area shape="rect" coords="417,0,849,627" href="firecherry.html" alt="style" />
+  		</map>
+  	</div>
+  	<br>
+  	<!-- The jumbotron class is among the defined classes in Bootstrap which helps to differentiate sections and create big headings in the document -->
+	<div class="jumbotron text-center">
+		<!-- Display-1 is a pre-defined text style in Bootstrap -->
+		<div class="display-1" id="products">Product Brochure</div>
+		<!-- The 'p' tag, also known as the paragraph tag is used to define paragraphs and the style attribute is used to provide internal CSS styling -->
+		<p style="font-size: 25px;">Seek out innovation below</p> 
+	</div>  
+	<!-- With the help of Bootstrap/CSS, Cards have been created below to feature the products created by the company similar to many ecommerce sites these days -->
+	<div style="background-color: black;">
+		<!-- The container class helps to create a pre-defined and styled container with side margins -->
+		<div class="container">
+			<!-- Used to differentiate rows in order to style them properly -->
+		  	<div class="row">
+		  		<!-- A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options ~ from getbootstrap.com. 9 cards have been defined below, one card for one product, 3 in a row -->
+		  		<!-- card-deck class acts as a container to multiple cards -->
+			    <div class="card-deck">
+			    	<!-- card class is used to define a card container and my-4 helps to define the width of the card -->
+			  		<div class="card my-4">
+			  			<!-- card-img-top class allows to have an image in the top of the card -->
+						<img class="card-img-top" src="images/1.png" height="350" alt="FirecherryXtreme" id="fxtreme">
+						<!-- card-body class allows to define the contents of the card's body -->
+	  					<div class="card-body">
+	  						<!-- card-title class allows to define the card's title text which will be indented differently -->
+	    					<h4 class="card-title">Firecherry Xtreme</h4>
+	    					<h5 class="card-title" style="color: #383838">Void Black</h5>
+	    					<!-- card-text class allows to define the card's textual content , often description text about the card -->
+	    					<!-- unordered list to state a few specifications of the device -->
+	    					<ul class="card-text">
+	    						<li>Snapdragon 845</li>
+	    						<li>8Gb LPDDR4 RAM</li>
+	    						<li>128Gb UFS ROM</li>
+	    					</ul>
+	    					<!-- btn and btn-outline-success classes allow to define a button with pre-defined styling -->
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('fxtreme','vb')">AUD 1200</a>
+	  					</div>
+					</div>
+			  		<div class="card my-4">
+					  	<img class="card-img-top" src="images/2.jpg" height="350" alt="FirecherryXtremePlus"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">Firecherry Xtreme Plus </h4>
+	    					<h5 class="card-title" style="color: #383838">Frost White</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 845</li>
+	    						<li>16Gb LPDDR4 RAM</li>
+	    						<li>512Gb UFS ROM</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('fxtremeplus','fw')">AUD 1500</a>
+	  					</div>
+					</div>
+					<div class="card my-4">
+					  <img class="card-img-top" src="images/3.jpg" height="350" alt="FirecherryElegantOne"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">Elegant ONE</h4>
+	    					<h5 class="card-title" style="color: #383838">Carbon Grey</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 845</li>
+	    						<li>6Gb LPDDR4 RAM</li>
+	    						<li>Marble back with Gold engraving</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('elegantone','cg')">AUD 1000</a>
+	  					</div>
+					</div>
+				</div>
+		  	</div>
+		  	<div class="row">
+			    <div class="card-deck">
+			  		<div class="card my-4">
+						<img class="card-img-top" src="images/4.jpg" height="350" alt="FirecherryElegantOneS"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">Elegant ONE S</h4>
+	    					<h5 class="card-title" style="color: #383838">Void Black</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 845</li>
+	    						<li>4Gb LPDDR4 RAM</li>
+	    						<li>Marble back with Gold engraving</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('elegantones','vb')">AUD 800</a>
+	  					</div>
+					</div>
+			  		<div class="card my-4">
+					  <img class="card-img-top" src="images/5.png" height="350" alt="FirecherryAlphaX"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">AlphaX</h4>
+	    					<h5 class="card-title" style="color: #383838">Frost White</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 660</li>
+	    						<li>4Gb LPDDR4 RAM</li>
+	    						<li>64Gb UFS ROM</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('alphax','fw')">AUD 500</a>
+	  					</div>
+					</div>
+					<div class="card my-4">
+					  <img class="card-img-top" src="images/6.jpg" height="350" alt="FirecherryNano"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">Firecherry Nano</h4>
+	    					<h5 class="card-title" style="color: #383838">Void Black</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 810</li>
+	    						<li>3Gb LPDDR3 RAM</li>
+	    						<li>64Gb UFS ROM</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('fnano','vb')">AUD 400</a>
+	  					</div>
+					</div>
+				</div>
+		  	</div>
+		  	<div class="row">
+			    <div class="card-deck">
+			  		<div class="card my-4">
+						<img class="card-img-top" src="images/7.png" height="350" alt="FirecherryNanoS"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">Firecherry Nano S</h4>
+	    					<h5 class="card-title" style="color: #383838">Mediterranean Blue</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 808</li>
+	    						<li>2Gb LPDDR3 RAM</li>
+	    						<li>64Gb UFS ROM</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('fnanos','mb')">AUD 300</a>
+	  					</div>
+					</div>
+			  		<div class="card my-4">
+					  <img class="card-img-top" src="images/8.jpg" height="350" alt="Juggernaut"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">Juggernaut</h4>
+	    					<h5 class="card-title" style="color: #383838">Void Black</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 845</li>
+	    						<li>8Gb LPDDR4 RAM</li>
+	    						<li>512Gb UFS ROM</li>
+	    						<li>Firecherry Pen included</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('jugnaut','vb')">AUD 1800</a>
+	  					</div>
+					</div>
+					<div class="card my-4">
+					  <img class="card-img-top" src="images/9.jpg" height="350" alt="JuggernautMini"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title">Juggernaut Mini</h4>
+	    					<h5 class="card-title" style="color: #383838">Void Black</h5>
+	    					<ul class="card-text">
+	    						<li>Snapdragon 835</li>
+	    						<li>6Gb LPDDR4 RAM</li>
+	    						<li>128Gb UFS ROM</li>
+	    						<li>Firecherry Pen included</li>
+	    					</ul>
+	    					<a href="#pinfo" class="btn btn-outline-success" onclick="update('jugnautmini','vb')">AUD 1600</a>
+	  					</div>
+					</div>
+				</div>
+		  	</div>
+		</div>
+	</div>
+	<!-- Again, a jumbotron class to seperate the product brochure from the order form (below) -->
+	<div class="jumbotron text-center">
+	  <div class="display-1" id="order">Order Now</div>
+	  <p style="font-size: 25px;">The only way to have the best</p> 
+	</div>
+	<!-- The container-fluid class is similar to the container class except from the reduced side margins -->
+	<div class="container-fluid" style="background-color: #efefef">
+		<!-- Order form definition implemented inside a table -->
+		<!-- The 'form' element is used to create a form and has various elements and attributes pertaining to it -->
+		<form action="mailto:orders@firecherry.com" method="post" enctype="text/plain" id="form" onsubmit="return validation()">
+			<!-- To have Customer Information and Product Information fieldsets on the same line -->
+			<div style="display: flex;">
+				<!-- Two fieldsets used to differentiate related information into their own sections -->
+				<!-- Customer Information fieldset -->
+				<fieldset id="cinfo">
+					<!-- The 'legend' tag is used to define a piece of text representing the contents of this specific fieldset -->
+					<legend>Customer Information</legend>
+					<!-- The 'table' element is used to create a table and has elements like 'tr'(used to define a row in the table), 'th'(used to define a table header), 'td'(used to define the table's data) -->
+					<table>	
+						<tr>
+							<td class="col1">Full Name:</td>
+							<td class="col2">
+								<!-- The 'input' tag is used for obtaining user input -->
+								<input name="fname" id="fname" type="text" placeholder="First"/>
+								<input name="lname" id="lname" type="text" placeholder="Last"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="col1">Phone Number:</td>
+							<td class="col2">
+								<input name="areacode" id="areacode" type="text" value="+61" size="3" readonly/>
+								<input name="phoneno" id="phoneno" type="text" placeholder="0123456789" style="width: 185px;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="col1">Email Address:</td>
+							<td class="col2">
+								<input name="email" id="email" type="email" placeholder="someone@example.com" style="width: 200px;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="col1" style="vertical-align: text-top; padding-top: 10px;">Delivery Address:</td>
+							<td class="col2">
+								<input name="street1" id="street1" type="text" placeholder="Street Address" style="width: 200px;"/><br>
+								<input name="street2" id="street2" type="text" placeholder="Street Address line 2" style="width: 250px;"/><br>
+								<input name="city" id="city" type="text" placeholder="City"/>
+								<!-- The 'select' tag is used to create a dropdown list where the 'option' elements inside help us to define the potential options that could be selected -->
+								<select name="state" id="state">
+										<option value="">State</option>
+				  						<option value="New_South_Wales">NSW</option>
+				  						<option value="Queensland">QLD</option>
+				  						<option value="South_Australia">SA</option>
+				  						<option value="Tasmania">TAS</option>
+				  						<option value="Victoria">VIC</option>
+				  						<option value="Western_Australia">WA</option>
+				  				</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="col1">Post Code:</td>
+							<td class="col2">
+								<input name="postcode" id="postcode" type="text" maxlength="4" size="4" placeholder="0000"/>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<!-- Product Information fieldset along with dynamic 'selected product' card -->
+				<fieldset id="pinfo" style="width: 50%; margin-left: auto; text-align: right;">
+					<legend>Product Information</legend>
+					<select name="product" id="product" style="margin-top: 10px;" onchange="upd(1)">
+						<option value="">Product</option>
+  						<option value="fxtreme">Firecherry Xtreme</option>
+  						<option value="fxtremeplus">Firecherry Xtreme Plus</option>
+  						<option value="elegantone">Elegant One</option>
+  						<option value="elegantones">Elegant One S</option>
+  						<option value="alphax">Alpha X</option>
+  						<option value="fnano">Firecherry Nano</option>
+  						<option value="fnanos">Firecherry Nano S</option>
+  						<option value="jugnaut">Juggernaut</option>
+  						<option value="jugnautmini">Juggernaut Mini</option>
+				  	</select>
+				  	<select name="shade" id="shade" onchange="upd(2)" style="margin-bottom: 10px;">
+				  		<option value="">Shade</option>
+				  		<option value="vb">Void Black</option>
+				  		<option value="fw">Frost White</option>
+				  		<option value="cg">Carbon Grey</option>
+				  		<option value="mb">Mediterranean Blue</option>
+				  		<option value="rp">Rose Pink</option>
+				  	</select>
+				  	<div class="card" style="width: 25em; float: right;">
+				  		<div class="card-header" style="color: #42f44e; font-size: 17.5px; font-weight: 700;">
+				  			<img src="images/greentick.png" width="24" alt="greentick"/>
+				  			<div id="sel" style="display: inline;"> Not Selected</div>
+						</div>
+						<img class="card-img-top" id="simg" src="images/cross.jpg" height="350" alt="FirecherryXtreme"/>
+	  					<div class="card-body">
+	    					<h4 class="card-title" id="stitle1" style="text-align: center;">Product</h4>
+	    					<h5 class="card-title" id="stitle2" style="color: #383838; text-align: center;">Shade</h5>
+	    					<a class="btn btn-outline-success" id="sprice">AUD</a>
+	  					</div>
+					</div>
+				</fieldset>
+			</div>
+			<div id="submit" style="text-align: center;">
+				<input type="submit" value="Purchase"/>
+			</div>
+			<!-- This is a webpage designed to cater consumers rather than retailers and hence, the order quantity is restricted to one product per order allowing interested consumers to purchase their desired products and in desired limited quantities by ordering again until they have purchased all that's required where the quantity is usually 2-3 products. However, for orders greater than that, an email shot on the below email address regarding the product(s) and their quantities will ensure that larger orders are catered as well -->
+			<p>Order quantity is restricted to only 1 product per order. For larger quantities please contact on this email address : <a href="mailto:orders@firecherry.com">orders@firecherry.com</a></p>
+		</form>
+	</div>
+	<!-- This is the footer added just for visual appeal, has no functionality associated with it -->
+	<div class="container-fluid" style="color: white; background-color: black; text-align: center; width: 100%;">
+		<a href="https://en.wikipedia.org/wiki/Prunus_pensylvanica" target="_blank"><img src="images/firecherry.png" width="25" alt="firecherry"/></a>
+	    Firecherry
+	</div>
+</body>
+</html>
+
+<!-- END OF DOCUMENT -->
